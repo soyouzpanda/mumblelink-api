@@ -1,0 +1,9 @@
+.openapi-generator-ignore
+Apis/DefaultApi.md
+Models/Error.md
+Models/ServerInfo.md
+Models/UserInfo.md
+Models/_server__server_id__users_get_200_response.md
+Models/_servers_create_post_request.md
+Models/_servers_get_200_response.md
+README.md
