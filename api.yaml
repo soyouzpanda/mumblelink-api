@@ -1,6 +1,7 @@
 openapi: 3.0.3
 info:
-  title: Mumble Link Core
+  title: Mumble Link API
+  description: OpenAPI spec for mumble link server and client
   license:
     name: MIT
     url: https://opensource.org/license/mit/
@@ -12,247 +13,51 @@ components:
       type: http
       scheme: bearer
   schemas:
-    ServerInfo:
-      type: object
-      required:
-        - server_id
-        - server_name
-        - max_users
-        - connected_users
-      properties:
-        server_id:
-          type: string
-        server_name:
-          type: string
-        max_users:
-          type: integer
-        connected_users:
-          type: integer
-    UserInfo:
-      type: object
-      required:
-        - user_id
-        - user_name
-        - mute
-        - deaf
-        - self_mute
-        - self_deaf
-      properties:
-        user_id:
-          type: string
-        user_name:
-          type: string
-        mute:
-          type: boolean
-        deaf:
-          type: boolean
-        self_mute:
-          type: boolean
-        self_deaf:
-          type: boolean
+    Server:
+      $ref: './schemas/server.yaml'
+    Channel:
+      $ref: './schemas/channel.yaml'
+    Group:
+      $ref: './schemas/group.yaml'
+    User:
+      $ref: './schemas/user.yaml'
     Error:
-      type: object
-      required:
-        - error
-      properties:
-        error:
-          type: string
-
+      $ref: './schemas/error.yaml'
 security:
   - Bearer: []
 
 paths:
   /servers:
-    get:
-      summary: Get list of servers
-      responses:
-        "200":
-          description: Servers info
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  servers:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/ServerInfo'
-
-        "500":
-          description: Error while getting list
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error'
-
-  /servers/create:
-    post:
-      summary: Create a new server
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                name:
-                  type: string
-                max_users:
-                  type: integer
-      responses:
-        "200":
-          description: Server info
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ServerInfo'
-        "400":
-          description: Bad request
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error'
-        "500":
-          description: Internal error
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error'
-
+    $ref: './paths/servers.yaml'
+  /server/create:
+    $ref: './paths/server.create.yaml'
   /server/{server_id}:
-    parameters:
-      - name: server_id
-        in: path
-        required: true
-        schema:
-          type: string
-    get:
-      responses:
-        "200":
-          description: Server info
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ServerInfo'
-        "404":
-          description: Server not found
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error'
-    delete:
-      responses:
-        "200":
-          description: Empty
-        "404":
-          description: Server not found
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error'
-        "500":
-          description: Internal error
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error'
-
+    $ref: './paths/server.server_id.yaml'
   /server/{server_id}/users:
-    parameters:
-      - name: server_id
-        in: path
-        required: true
-        schema:
-          type: string
-    get:
-      responses:
-        "200":
-          description: Users info
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  users:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/ServerInfo'
-        "404":
-          description: Server not found
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error'
-
+    $ref: './paths/server.server_id.users.yaml'
   /server/{server_id}/user/{user_id}:
-    parameters:
-      - name: server_id
-        in: path
-        required: true
-        schema:
-          type: string
-      - name: user_id
-        in: path
-        required: true
-        schema:
-          type: integer
-    get:
-      responses:
-        "200":
-          description: User info
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/UserInfo'
-        "404":
-          description: Not found
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error'
-
+    $ref: './paths/server.server_id.user.user_id.yaml'
   /server/{server_id}/user/{user_id}/mute:
-    parameters:
-      - name: server_id
-        in: path
-        required: true
-        schema:
-          type: string
-      - name: user_id
-        in: path
-        required: true
-        schema:
-          type: integer
-    post:
-      responses:
-        "200":
-          description: Empty
-        "404":
-          description: Not found
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error'
-
+    $ref: './paths/server.server_id.user.user_id.mute.yaml'
   /server/{server_id}/user/{user_id}/unmute:
-    parameters:
-      - name: server_id
-        in: path
-        required: true
-        schema:
-          type: string
-      - name: user_id
-        in: path
-        required: true
-        schema:
-          type: integer
-    post:
-      responses:
-        "200":
-          description: Empty
-        "404":
-          description: Not found
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error'
+    $ref: './paths/server.server_id.user.user_id.unmute.yaml'
+  /server/{server_id}/user/{user_id}/kick:
+    $ref: './paths/server.server_id.user.user_id.kick.yaml'
+  /server/{server_id}/user/{user_id}/ban:
+    $ref: './paths/server.server_id.user.user_id.ban.yaml'
+  /server/{server_id}/user/{user_id}/bans:
+    $ref: './paths/server.server_id.user.user_id.bans.yaml'
+  /server/{server_id}/user/{user_id}/move:
+    $ref: './paths/server.server_id.user.user_id.move.yaml'
+  /server/{server_id}/groups:
+    $ref: './paths/server.server_id.groups.yaml'
+  /server/{server_id}/group/create:
+    $ref: './paths/server.server_id.group.create.yaml'
+  /server/{server_id}/group/{group_id}:
+    $ref: './paths/server.server_id.group.group_id.yaml'
+  /server/{server_id}/channels:
+    $ref: './paths/server.server_id.channels.yaml'
+  /server/{server_id}/channel/create:
+    $ref: './paths/server.server_id.channel.create.yaml'
+  /server/{server_id}/channel/{channel_id}:
+    $ref: './paths/server.server_id.channel.channel_id.yaml'

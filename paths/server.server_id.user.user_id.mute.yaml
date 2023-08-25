@@ -1,0 +1,10 @@
+post:
+  description: Mute an user
+  parameters:
+    - $ref: '../parameters/server_id.yaml'
+    - $ref: '../parameters/user_id.yaml'
+  responses:
+    "200":
+      description: Empty
+    default:
+      $ref: '../responses/error.yaml'

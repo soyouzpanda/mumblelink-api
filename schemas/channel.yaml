@@ -1,0 +1,20 @@
+type: object
+required:
+  - channel_id
+  - channel_name
+properties:
+  channel_id:
+    type: integer
+  channel_name:
+    type: string
+  parent:
+    type: string
+    format: uuid
+  children:
+    type: array
+    items:
+      type: integer
+  users_in:
+    type: array
+    items:
+      type: integer

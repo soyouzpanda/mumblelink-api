@@ -1,0 +1,32 @@
+post:
+  description: Create a new group
+  parameters:
+    - $ref: '../parameters/server_id.yaml'
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          required:
+            - name
+          properties:
+            name:
+              type: string
+            allowed_actions:
+              type: array
+              items:
+                $ref: '../enums/actions.yaml'
+            denied_actions:
+              type: array
+              items:
+                $ref: '../enums/actions.yaml'
+  responses:
+    "200":
+      description: Group
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/group.yaml'
+    default:
+      $ref: '../responses/error.yaml'

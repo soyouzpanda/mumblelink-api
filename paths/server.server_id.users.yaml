@@ -1,0 +1,18 @@
+get:
+  description: Get list of connected users
+  parameters:
+    - $ref: '../parameters/server_id.yaml'
+  responses:
+    "200":
+      description: Users
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              users:
+                type: array
+                items:
+                  $ref: '../schemas/user.yaml'
+    default:
+      $ref: '../responses/error.yaml'

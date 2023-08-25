@@ -1,0 +1,29 @@
+type: object
+required:
+  - user_id
+  - user_name
+  - mute
+  - deaf
+  - self_mute
+  - self_deaf
+  - group_id
+  - channel_in
+properties:
+  user_id:
+    type: string
+    format: uuid
+  user_name:
+    type: string
+  mute:
+    type: boolean
+  deaf:
+    type: boolean
+  self_mute:
+    type: boolean
+  self_deaf:
+    type: boolean
+  group_id:
+    type: string
+    format: uuid
+  channel_in:
+    type: integer

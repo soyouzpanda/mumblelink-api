@@ -1,0 +1,26 @@
+post:
+  description: Create a new channel
+  parameters:
+    - $ref: '../parameters/server_id.yaml'
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          required:
+            - name
+          properties:
+            name:
+              type: string
+            parent:
+              type: integer
+  response:
+    "200":
+      description: Channel
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/channel.yaml'
+    default:
+      $ref: '../responses/error.yaml'

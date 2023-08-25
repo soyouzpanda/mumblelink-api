@@ -1,0 +1,15 @@
+get:
+  description: Get list of groups
+  parameters:
+    - $ref: '../parameters/server_id.yaml'
+  responses:
+    "200":
+      description: Groups
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '../schemas/group.yaml'
+    default:
+      $ref: '../responses/error.yaml'

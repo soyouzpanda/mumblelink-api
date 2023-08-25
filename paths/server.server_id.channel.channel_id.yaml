@@ -1,0 +1,46 @@
+get:
+  description: Get channel info
+  parameters:
+    - $ref: '../parameters/server_id.yaml'
+    - $ref: '../parameters/channel_id.yaml'
+  responses:
+    "200":
+      description: Channel
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/channel.yaml'
+    default:
+      $ref: '../responses/error.yaml'
+delete:
+  description: Delete a channel
+  parameters:
+    - $ref: '../parameters/server_id.yaml'
+    - $ref: '../parameters/channel_id.yaml'
+  responses:
+    "200":
+      description: Empty
+    default:
+      $ref: '../responses/error.yaml'
+put:
+  description: Modify channel parameters
+  parameters:
+    - $ref: '../parameters/server_id.yaml'
+    - $ref: '../parameters/channel_id.yaml'
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            name:
+              type: string
+  responses:
+    "200":
+      description: Channel
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/channel.yaml'
+    default:
+      $ref: '../responses/error.yaml'

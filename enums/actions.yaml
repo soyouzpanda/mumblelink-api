@@ -1,0 +1,17 @@
+type: string
+enum:
+  - "write"
+  - "traverse"
+  - "enter"
+  - "speak"
+  - "mute_deafen"
+  - "move"
+  - "make_channel"
+  - "link_channel"
+  - "whisper"
+  - "text_message"
+  - "make_temp_channel"
+  - "kick"
+  - "ban"
+  - "register"
+  - "register_self"

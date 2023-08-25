@@ -1,0 +1,54 @@
+get:
+  description: Get group info
+  parameters:
+    - $ref: '../parameters/server_id.yaml'
+    - $ref: '../parameters/group_id.yaml'
+  responses:
+    "200":
+      description: Group
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/group.yaml'
+    default:
+      $ref: '../responses/error.yaml'
+delete:
+  description: Delete a group
+  parameters:
+    - $ref: '../parameters/server_id.yaml'
+    - $ref: '../parameters/group_id.yaml'
+  responses:
+    "200":
+      description: Empty
+    default:
+      $ref: '../responses/error.yaml'
+put:
+  description: Modify group parameters
+  parameters:
+    - $ref: '../parameters/server_id.yaml'
+    - $ref: '../parameters/group_id.yaml'
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            name:
+              type: string
+            allowed_actions:
+              type: array
+              items:
+                $ref: '../enums/actions.yaml'
+            denied_actions:
+              type: array
+              items:
+                $ref: '../enums/actions.yaml'
+  responses:
+    "200":
+      description: Group
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/group.yaml'
+    default:
+      $ref: '../responses/error.yaml'

@@ -1,0 +1,20 @@
+type: object
+required:
+  - group_id
+  - group_name
+  - allowed_actions
+  - denied_actions
+properties:
+  group_id:
+    type: string
+    format: uuid
+  group_name:
+    type: string
+  allowed_actions:
+    type: array
+    items:
+      $ref: '../enums/actions.yaml'
+  denied_actions:
+    type: array
+    items:
+      $ref: '../enums/actions.yaml'

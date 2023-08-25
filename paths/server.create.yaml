@@ -1,0 +1,25 @@
+post:
+  summary: Create a new server
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          required:
+            - name
+            - max_users
+          properties:
+            name:
+              type: string
+            max_users:
+              type: integer
+  responses:
+    "200":
+      description: Server
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/server.yaml'
+    default:
+      $ref: '../responses/error.yaml'

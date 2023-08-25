@@ -1,0 +1,15 @@
+get:
+  description: Get list of channels
+  parameters:
+    - $ref: '../parameters/server_id.yaml'
+  responses:
+    "200":
+      description: Channels
+      content:
+        application/json:
+          schema:
+            type: array
+            items:
+              $ref: '../schemas/channel.yaml'
+    default:
+      $ref: '../responses/error.yaml'

@@ -1,0 +1,19 @@
+type: object
+required:
+  - user_name
+  - ip
+  - reason
+  - start
+  - duration
+properties:
+  user_name:
+    type: string
+  ip:
+    type: string
+    format: ip
+  reason:
+    type: string
+  start:
+    type: integer
+  duration:
+    type: integer

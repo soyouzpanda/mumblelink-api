@@ -1,9 +1,12 @@
-# _server__server_id__users_get_200_response
+# Group
 ## Properties
 
 | Name | Type | Description | Notes |
 |------------ | ------------- | ------------- | -------------|
-| **users** | [**List**](User.md) |  | [optional] [default to null] |
+| **group\_id** | **UUID** |  | [default to null] |
+| **group\_name** | **String** |  | [default to null] |
+| **allowed\_actions** | [**List**](actions.md) |  | [default to null] |
+| **denied\_actions** | [**List**](actions.md) |  | [default to null] |
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -1,0 +1,45 @@
+get:
+  description: Get server info
+  parameters:
+    - $ref: '../parameters/server_id.yaml'
+  responses:
+    "200":
+      description: Server
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/server.yaml'
+    default:
+      $ref: '../responses/error.yaml'
+delete:
+  description: Delete a server
+  parameters:
+    - $ref: '../parameters/server_id.yaml'
+  responses:
+    "200":
+      description: Empty
+    default:
+      $ref: '../responses/error.yaml'
+put:
+  description: Modify server parameters
+  parameters:
+    - $ref: '../parameters/server_id.yaml'
+  requestBody:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            name:
+              type: string
+            max_users:
+              type: integer
+  responses:
+    "200":
+      description: Server
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/server.yaml'
+    default:
+      $ref: '../responses/error.yaml'

@@ -1,0 +1,18 @@
+get:
+  summary: Get list of servers
+  responses:
+    "200":
+      description: List of servers
+      content:
+        application/json:
+          schema:
+            type: object
+            required:
+              - servers
+            properties:
+              servers:
+                type: array
+                items:
+                  $ref: '../schemas/server.yaml'
+    default:
+      $ref: '../responses/error.yaml'

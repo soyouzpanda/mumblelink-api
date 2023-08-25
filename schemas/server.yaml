@@ -1,0 +1,16 @@
+type: object
+required:
+  - server_id
+  - server_name
+  - max_users
+  - user_count
+properties:
+  server_id:
+    type: string
+    format: uuid
+  server_name:
+    type: string
+  max_users:
+    type: integer
+  user_count:
+    type: integer
