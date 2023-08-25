@@ -112,7 +112,7 @@ null (empty response body)
 
 <a name="serverServerIdChannelChannelIdPut"></a>
 # **serverServerIdChannelChannelIdPut**
-> Channel serverServerIdChannelChannelIdPut(server\_id, channel\_id, \_server\_\_server\_id\_\_channel\_\_channel\_id\_\_delete\_request)
+> Channel serverServerIdChannelChannelIdPut(server\_id, channel\_id, \_server\_\_server\_id\_\_channel\_\_channel\_id\_\_put\_request)
 
 
 
@@ -124,7 +124,7 @@ null (empty response body)
 |------------- | ------------- | ------------- | -------------|
 | **server\_id** | **UUID**|  | [default to null] |
 | **channel\_id** | **Integer**|  | [default to null] |
-| **\_server\_\_server\_id\_\_channel\_\_channel\_id\_\_delete\_request** | [**_server__server_id__channel__channel_id__delete_request**](../Models/_server__server_id__channel__channel_id__delete_request.md)|  | [optional] |
+| **\_server\_\_server\_id\_\_channel\_\_channel\_id\_\_put\_request** | [**_server__server_id__channel__channel_id__put_request**](../Models/_server__server_id__channel__channel_id__put_request.md)|  | [optional] |
 
 ### Return type
 
@@ -334,7 +334,7 @@ null (empty response body)
 
 <a name="serverServerIdGroupGroupIdPut"></a>
 # **serverServerIdGroupGroupIdPut**
-> Group serverServerIdGroupGroupIdPut(server\_id, group\_id, \_server\_\_server\_id\_\_group\_\_group\_id\_\_delete\_request)
+> Group serverServerIdGroupGroupIdPut(server\_id, group\_id, \_server\_\_server\_id\_\_group\_\_group\_id\_\_put\_request)
 
 
 
@@ -346,7 +346,7 @@ null (empty response body)
 |------------- | ------------- | ------------- | -------------|
 | **server\_id** | **UUID**|  | [default to null] |
 | **group\_id** | **UUID**|  | [default to null] |
-| **\_server\_\_server\_id\_\_group\_\_group\_id\_\_delete\_request** | [**_server__server_id__group__group_id__delete_request**](../Models/_server__server_id__group__group_id__delete_request.md)|  | [optional] |
+| **\_server\_\_server\_id\_\_group\_\_group\_id\_\_put\_request** | [**_server__server_id__group__group_id__put_request**](../Models/_server__server_id__group__group_id__put_request.md)|  | [optional] |
 
 ### Return type
 
@@ -390,7 +390,7 @@ null (empty response body)
 
 <a name="serverServerIdPut"></a>
 # **serverServerIdPut**
-> Server serverServerIdPut(server\_id, \_server\_\_server\_id\_\_delete\_request)
+> Server serverServerIdPut(server\_id, \_server\_\_server\_id\_\_put\_request)
 
 
 
@@ -401,7 +401,7 @@ null (empty response body)
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **server\_id** | **UUID**|  | [default to null] |
-| **\_server\_\_server\_id\_\_delete\_request** | [**_server__server_id__delete_request**](../Models/_server__server_id__delete_request.md)|  | [optional] |
+| **\_server\_\_server\_id\_\_put\_request** | [**_server__server_id__put_request**](../Models/_server__server_id__put_request.md)|  | [optional] |
 
 ### Return type
 
@@ -422,7 +422,7 @@ null (empty response body)
 
 
 
-    Ban an user
+    Ban a user
 
 ### Parameters
 
@@ -451,7 +451,7 @@ null (empty response body)
 
 
 
-    Get list of bans
+    Get list of banned users
 
 ### Parameters
 
@@ -506,7 +506,7 @@ null (empty response body)
 
 
 
-    Kick an user
+    Kick a user
 
 ### Parameters
 
@@ -535,7 +535,7 @@ null (empty response body)
 
 
 
-    Move an user to another channel
+    Move a user to another channel
 
 ### Parameters
 
@@ -564,7 +564,7 @@ null (empty response body)
 
 
 
-    Mute an user
+    Mute a user
 
 ### Parameters
 
@@ -592,7 +592,7 @@ null (empty response body)
 
 
 
-    Unmute an user
+    Unmute a user
 
 ### Parameters
 

@@ -1,5 +1,5 @@
 post:
-  description: Kick an user
+  description: Kick a user
   parameters:
     - $ref: '../parameters/server_id.yaml'
     - $ref: '../parameters/user_id.yaml'

@@ -1,5 +1,5 @@
 post:
-  description: Mute an user
+  description: Mute a user
   parameters:
     - $ref: '../parameters/server_id.yaml'
     - $ref: '../parameters/user_id.yaml'

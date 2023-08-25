@@ -1,5 +1,5 @@
 post:
-  description: Move an user to another channel
+  description: Move a user to another channel
   parameters:
     - $ref: '../parameters/server_id.yaml'
     - $ref: '../parameters/user_id.yaml'

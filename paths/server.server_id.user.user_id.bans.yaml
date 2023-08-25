@@ -1,5 +1,5 @@
 get:
-  description: Get list of bans
+  description: Get list of banned users
   parameters:
     - $ref: '../parameters/server_id.yaml'
   responses:

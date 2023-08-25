@@ -21,13 +21,13 @@ All URIs are relative to *http://localhost*
 *DefaultApi* | [**serverServerIdGroupGroupIdPut**](Apis/DefaultApi.md#serverserveridgroupgroupidput) | **PUT** /server/{server_id}/group/{group_id} | Modify group parameters |
 *DefaultApi* | [**serverServerIdGroupsGet**](Apis/DefaultApi.md#serverserveridgroupsget) | **GET** /server/{server_id}/groups | Get list of groups |
 *DefaultApi* | [**serverServerIdPut**](Apis/DefaultApi.md#serverserveridput) | **PUT** /server/{server_id} | Modify server parameters |
-*DefaultApi* | [**serverServerIdUserUserIdBanPost**](Apis/DefaultApi.md#serverserveriduseruseridbanpost) | **POST** /server/{server_id}/user/{user_id}/ban | Ban an user |
-*DefaultApi* | [**serverServerIdUserUserIdBansGet**](Apis/DefaultApi.md#serverserveriduseruseridbansget) | **GET** /server/{server_id}/user/{user_id}/bans | Get list of bans |
+*DefaultApi* | [**serverServerIdUserUserIdBanPost**](Apis/DefaultApi.md#serverserveriduseruseridbanpost) | **POST** /server/{server_id}/user/{user_id}/ban | Ban a user |
+*DefaultApi* | [**serverServerIdUserUserIdBansGet**](Apis/DefaultApi.md#serverserveriduseruseridbansget) | **GET** /server/{server_id}/user/{user_id}/bans | Get list of banned users |
 *DefaultApi* | [**serverServerIdUserUserIdGet**](Apis/DefaultApi.md#serverserveriduseruseridget) | **GET** /server/{server_id}/user/{user_id} | Get user info |
-*DefaultApi* | [**serverServerIdUserUserIdKickPost**](Apis/DefaultApi.md#serverserveriduseruseridkickpost) | **POST** /server/{server_id}/user/{user_id}/kick | Kick an user |
-*DefaultApi* | [**serverServerIdUserUserIdMovePost**](Apis/DefaultApi.md#serverserveriduseruseridmovepost) | **POST** /server/{server_id}/user/{user_id}/move | Move an user to another channel |
-*DefaultApi* | [**serverServerIdUserUserIdMutePost**](Apis/DefaultApi.md#serverserveriduseruseridmutepost) | **POST** /server/{server_id}/user/{user_id}/mute | Mute an user |
-*DefaultApi* | [**serverServerIdUserUserIdUnmutePost**](Apis/DefaultApi.md#serverserveriduseruseridunmutepost) | **POST** /server/{server_id}/user/{user_id}/unmute | Unmute an user |
+*DefaultApi* | [**serverServerIdUserUserIdKickPost**](Apis/DefaultApi.md#serverserveriduseruseridkickpost) | **POST** /server/{server_id}/user/{user_id}/kick | Kick a user |
+*DefaultApi* | [**serverServerIdUserUserIdMovePost**](Apis/DefaultApi.md#serverserveriduseruseridmovepost) | **POST** /server/{server_id}/user/{user_id}/move | Move a user to another channel |
+*DefaultApi* | [**serverServerIdUserUserIdMutePost**](Apis/DefaultApi.md#serverserveriduseruseridmutepost) | **POST** /server/{server_id}/user/{user_id}/mute | Mute a user |
+*DefaultApi* | [**serverServerIdUserUserIdUnmutePost**](Apis/DefaultApi.md#serverserveriduseruseridunmutepost) | **POST** /server/{server_id}/user/{user_id}/unmute | Unmute a user |
 *DefaultApi* | [**serverServerIdUsersGet**](Apis/DefaultApi.md#serverserveridusersget) | **GET** /server/{server_id}/users | Get list of connected users |
 *DefaultApi* | [**serversGet**](Apis/DefaultApi.md#serversget) | **GET** /servers | Get list of servers |
 
@@ -40,11 +40,11 @@ All URIs are relative to *http://localhost*
  - [Group](./Models/Group.md)
  - [Server](./Models/Server.md)
  - [User](./Models/User.md)
- - [_server__server_id__channel__channel_id__delete_request](./Models/_server__server_id__channel__channel_id__delete_request.md)
+ - [_server__server_id__channel__channel_id__put_request](./Models/_server__server_id__channel__channel_id__put_request.md)
  - [_server__server_id__channel_create_post_request](./Models/_server__server_id__channel_create_post_request.md)
- - [_server__server_id__delete_request](./Models/_server__server_id__delete_request.md)
- - [_server__server_id__group__group_id__delete_request](./Models/_server__server_id__group__group_id__delete_request.md)
+ - [_server__server_id__group__group_id__put_request](./Models/_server__server_id__group__group_id__put_request.md)
  - [_server__server_id__group_create_post_request](./Models/_server__server_id__group_create_post_request.md)
+ - [_server__server_id__put_request](./Models/_server__server_id__put_request.md)
  - [_server__server_id__user__user_id__ban_post_request](./Models/_server__server_id__user__user_id__ban_post_request.md)
  - [_server__server_id__user__user_id__kick_post_request](./Models/_server__server_id__user__user_id__kick_post_request.md)
  - [_server__server_id__user__user_id__move_post_request](./Models/_server__server_id__user__user_id__move_post_request.md)
