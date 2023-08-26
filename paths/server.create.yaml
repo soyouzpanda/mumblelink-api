@@ -14,6 +14,10 @@ post:
               type: string
             max_users:
               type: integer
+            server_password:
+              type: string
+            superuser_password:
+              type: string
   responses:
     "200":
       description: Server

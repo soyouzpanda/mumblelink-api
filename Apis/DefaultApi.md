@@ -141,7 +141,7 @@ null (empty response body)
 
 <a name="serverServerIdChannelCreatePost"></a>
 # **serverServerIdChannelCreatePost**
-> serverServerIdChannelCreatePost(server\_id, \_server\_\_server\_id\_\_channel\_create\_post\_request)
+> Channel serverServerIdChannelCreatePost(server\_id, \_server\_\_server\_id\_\_channel\_create\_post\_request)
 
 
 
@@ -156,7 +156,7 @@ null (empty response body)
 
 ### Return type
 
-null (empty response body)
+[**Channel**](../Models/Channel.md)
 
 ### Authorization
 
@@ -165,7 +165,7 @@ null (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: Not defined
+- **Accept**: application/json
 
 <a name="serverServerIdChannelsGet"></a>
 # **serverServerIdChannelsGet**
