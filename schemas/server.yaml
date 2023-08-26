@@ -14,3 +14,7 @@ properties:
     type: integer
   user_count:
     type: integer
+  server_password:
+    type: string
+  superuser_password:
+    type: string
